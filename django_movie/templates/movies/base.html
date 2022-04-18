@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% block content %}
+    <section class="ab-info-main py-md-5 py-4 editContent"
+             style="padding-left: 3rem; padding-right 3rem;">
+        <div class="container py-md-3">
+            <div class="row">
+                {% block sidebar %}
+                    <div class="side-bar col-lg-3">
+                {% endblock sidebar %}
+                {% include 'include/side_bar.html' %}
+                {% block movie %}
+
+                {% endblock movie %}
+            </div>
+        </div>
+    </section>
+{% endblock content %}
