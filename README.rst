@@ -12,12 +12,13 @@ poetry install
 По умолчанию настроено на базу postgreSQL:
 Измените натройки в файле
 
-```bash
 django_movie/settings.py (раздел DATABASES)
-```
+
 
 ```bash
 python manage.py makemigrations
+```
+```bash
 python manage.py migrate
 ```
 
