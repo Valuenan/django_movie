@@ -24,6 +24,7 @@ class MovieView(GenreYear, ListView):
     model = Movie
     context_object_name = 'movies_list'
     queryset = Movie.objects.only('title', 'poster', 'tagline', 'draft', 'url').filter(draft=False)
+    ordering = ['id']
     paginate_by = 1
 
 
@@ -44,6 +45,8 @@ class MovieDetailView(GenreYear, DetailView):
     def get_context_data(self, **kwargs):
         context = super(MovieDetailView, self).get_context_data(**kwargs)
         movie_id = self.model.objects.get(url=self.kwargs['slug']).id
+        context["form"] = ReviewForm()
+
         context["star_form"] = RatingForm()
 
         rating = Rating.objects.filter(movie=movie_id, ip=self.get_client_ip(self.request))
@@ -56,6 +59,7 @@ class MovieDetailView(GenreYear, DetailView):
 
         avg_star = Rating.objects.filter(movie=movie_id).aggregate(Avg('star__value'))
         context["average_stars"] = lambda avg: round(avg_star['star__value__avg'], 1) if avg_star else 0
+
         return context
 
 
