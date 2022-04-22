@@ -1,6 +1,8 @@
 {% extends 'movies/base.html' %}
 {% load static %}
+
 {% block title %} {{ movie.title }} {% endblock title %}
+
 {% block sidebar %}
 <div class="side-bar col-lg-4">
     {% endblock sidebar %}
@@ -57,20 +59,27 @@
                     </span>
                     </li>
                     <li style="list-style: none">
-                        <a href="#"><b>Рейтинг:</b>
-                            <span class="fa fa-star" aria-hidden="true"
-                                  style="outline: none; cursor: inherit;"></span>
-                            <span class="fa fa-star" aria-hidden="true"
-                                  style="outline: none; cursor: inherit;"></span>
-                            <span class="fa fa-star" aria-hidden="true"
-                                  style="outline: none; cursor: inherit;"></span>
-                            <span class="fa fa-star" aria-hidden="true"
-                                  style="outline: none; cursor: inherit;"></span>
-                            <span class="fa fa-star" aria-hidden="true"
-                                  style="outline: none; cursor: inherit;"></span>
-                            <span class="editContent"
-                                  style="outline: none; cursor: inherit;">5.0</span>
-                        </a>
+                        <form action="{% url 'add_rating' %}" method="post" name="rating">
+                            <b>Рейтинг:</b>
+                            {% csrf_token %}
+                            <input type="hidden" value="{{ movie.id }}" name="movie">
+                            <span class="rating">
+                                {% for k, v in star_form.fields.star.choices %}
+                                    {% if user_rating %}
+                                        <input id="rating{{ v }}" type="radio"
+                                            {% if k == user_rating.star.id %}
+                                                checked
+                                            {% endif %}
+                                       name="star" value="{{ k }}">
+                                    {% else %}
+                                        <input id="rating{{ v }}" type="radio" name="star" value="{{ k }}">
+                                    {% endif %}
+                                        <label for="rating{{ v }}">{{ k }}</label>
+                                {% endfor %}
+                            </span>
+                            <span class="editContent">{{ average_stars }}</span>
+                        </form>
+
                     </li>
                     <div class="share-desc">
                         <div class="share">
@@ -124,7 +133,8 @@
                 <div class="contact-single">
                     <h3 class="editContent" style="outline: none; cursor: inherit;">
                         <span class="sub-tittle editContent"
-                              style="outline: none; cursor: inherit;">{{ movie.reviews_set.count }}</span>Оставить отзыв</h3>
+                              style="outline: none; cursor: inherit;">{{ movie.reviews_set.count }}</span>Оставить отзыв
+                    </h3>
                     <form action="{% url 'add_review' movie.id %}" method="post" class="mt-4" id="formReview">
                         {% csrf_token %}
                         <input type="hidden" name="parent" id="contactparent" value="">
@@ -172,19 +182,19 @@
                 <a href="#formReview" onclick="addReview('{{ review.name }}', '{{ review.id }}')">Ответить</a>
 
                 {% for rew in review.reviews_set.all %}
-                    <div class="media mt-5 editContent">
-                        <a class="pr-3" href="#">
-                            <img src="{% static 'images/te2.jpg' %}" class="img-fluid " alt="image">
-                        </a>
-                        <div class="media-body">
-                            <h5 class="mt-0 editContent">
-                                {{ rew.name }}
-                            </h5>
-                            <p class="mt-2 editContent">
-                                {{ rew.text }}
-                            </p>
-                            </div>
-                        </div>
+                <div class="media mt-5 editContent">
+                    <a class="pr-3" href="#">
+                        <img src="{% static 'images/te2.jpg' %}" class="img-fluid " alt="image">
+                    </a>
+                    <div class="media-body">
+                        <h5 class="mt-0 editContent">
+                            {{ rew.name }}
+                        </h5>
+                        <p class="mt-2 editContent">
+                            {{ rew.text }}
+                        </p>
+                    </div>
+                </div>
                 {% endfor %}
             </div>
         </div>
@@ -193,6 +203,9 @@
                     document.getElementById("contactparent").value = id;
                     document.getElementById("contactcomment").innerText = name + ', '
                 }
+
+
+
         </script>
         {% endfor %}
     </div>

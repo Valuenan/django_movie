@@ -10,7 +10,6 @@ from ckeditor_uploader.widgets import CKEditorUploadingWidget
 class MovieAdminForm(forms.ModelForm):
     description = forms.CharField(label='Описание', widget=CKEditorUploadingWidget())
 
-
     class Meta:
         model = Movie
         fields = '__all__'
@@ -134,7 +133,7 @@ class ActorAdmin(admin.ModelAdmin):
 
 @admin.register(Rating)
 class RatingAdmin(admin.ModelAdmin):
-    list_display = ("star", "ip")
+    list_display = ("star", "movie", "ip")
 
 
 admin.site.register(RatingStar)
