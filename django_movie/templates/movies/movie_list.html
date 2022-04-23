@@ -1,5 +1,6 @@
 {% extends 'movies/base.html' %}
-{% block title %} главная {% endblock title %}
+{% load i18n %}
+{% block title %} {% trans 'главная'|capfirst %} {% endblock title %}
 {% block header %} bg1 {% endblock header %}
 {% block movie %}
     <div class="left-ads-display col-lg-9">

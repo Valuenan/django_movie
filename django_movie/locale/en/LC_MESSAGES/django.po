@@ -26,6 +26,14 @@ msgstr "Русский"
 msgid "English"
 msgstr "Английский"
 
+#: .\contact\models.py:14
+msgid "Контакт"
+msgstr "Contact"
+
+#: .\contact\models.py:15
+msgid "Контакты"
+msgstr "Contacts"
+
 #: .\movies\models.py:18
 msgid "Категория"
 msgstr "Category"

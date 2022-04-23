@@ -1,5 +1,5 @@
 from django.db import models
-
+from django.utils.translation import gettext_lazy as _
 
 class Contact(models.Model):
     '''Подписка по email'''
@@ -11,5 +11,5 @@ class Contact(models.Model):
 
     class Meta:
         db_table = "contacts"
-        verbose_name = "Контакт"
-        verbose_name_plural = "Контакты"
+        verbose_name = _("Контакт")
+        verbose_name_plural = _("Контакты")
