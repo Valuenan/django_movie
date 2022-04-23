@@ -144,8 +144,16 @@ msgid "меню"
 msgstr "menu"
 
 #: .\templates\include\header.html:31
+msgid "выход"
+msgstr "sign out"
+
+#: .\templates\include\header.html:36
 msgid "вход"
 msgstr "sign in"
+
+#: .\templates\include\header.html:39
+msgid "регистрация"
+msgstr "sign up"
 
 #: .\templates\include\header.html:56
 msgid "лучший сайт на django 3"

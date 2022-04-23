@@ -13,6 +13,7 @@ psycopg2 = "^2.9.3"
 django-recaptcha3 = "^0.4.0"
 Django = "3.2.13"
 django-modeltranslation = "^0.17.5"
+django-allauth = "^0.50.0"
 
 [tool.poetry.dev-dependencies]
 
