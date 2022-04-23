@@ -28,6 +28,12 @@ python manage.py migrate
 python manage.py createsuperuser
 ```
 
+Загрузить данные из фикстуры(опционально):
+
+```bash
+manage.py loaddata data.json
+```
+
 Запустить веб-сервер проекта:
 
 ```bash
