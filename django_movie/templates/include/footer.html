@@ -1,4 +1,4 @@
-{% load contact_tags %}
+{% load i18n contact_tags %}
 <footer class="editContent">
     <div class="container">
         <div class="row footer-top">
@@ -12,12 +12,10 @@
                     </a>
                 </h2>
                 <p class="editContent" style="outline: none; cursor: inherit;">
-                    Канал для программистов и людей, которые хотят развиваться в сфере IT.
-                    Видео уроки по python 3, Django 2, Django 3, JavaScript, Vue.js, HTML, CSS
-                    и многое другое.
+
                 </p>
                 <h4 class="sub-con-fo ad-info my-4 editContent"
-                    style="outline: none; cursor: inherit;">Catch on Social</h4>
+                    style="outline: none; cursor: inherit;">{% trans 'Наши социальные сети' %}</h4>
                 <ul class="w3layouts_social_list media-soc list-unstyled">
                     <li>
                         <a href="#" class="w3pvt_facebook editContent"
@@ -58,19 +56,19 @@
                 <div class="row mt-lg-4 bottom-w3layouts-sec-nav mx-0">
                     <div class="col-md-4 footer-grid_section_w3layouts">
                         <h3 class="footer-title text-uppercase editContent mb-lg-4 mb-3"
-                            style="outline: none; cursor: inherit;">Разделы</h3>
+                            style="outline: none; cursor: inherit;">{% trans 'разделы'|capfirst %}</h3>
                         <ul class="list-unstyled w3layouts-icons">
                             <li>
                                 <a href="index.html" class="editContent"
-                                   style="outline: none; cursor: inherit;">Главная</a>
+                                   style="outline: none; cursor: inherit;">{% trans 'главная'|capfirst %}</a>
                             </li>
                             <li>
                                 <a href="about.html" class="editContent"
-                                   style="outline: none; cursor: inherit;">Категории</a>
+                                   style="outline: none; cursor: inherit;">{% trans 'категории'|capfirst %}</a>
                             </li>
                             <li>
                                 <a href="contact.html" class="editContent"
-                                   style="outline: none; cursor: inherit;">Контакты</a>
+                                   style="outline: none; cursor: inherit;">{% trans 'контакты'|capfirst %}</a>
                             </li>
                         </ul>
                     </div>
@@ -78,28 +76,12 @@
                         <!-- social icons -->
                         <div class="agileinfo_social_icons">
                             <h3 class="footer-title text-uppercase editContent mb-lg-4 mb-3"
-                                style="outline: none; cursor: inherit;">Pages</h3>
+                                style="outline: none; cursor: inherit;">{% trans 'страницы'|capfirst %}</h3>
                             <ul class="list-unstyled w3layouts-icons">
 
                                 <li>
                                     <a href="#" class="editContent"
-                                       style="outline: none; cursor: inherit;">About Us</a>
-                                </li>
-                                <li>
-                                    <a href="#" class="editContent"
-                                       style="outline: none; cursor: inherit;">About Us</a>
-                                </li>
-                                <li>
-                                    <a href="#" class="editContent"
-                                       style="outline: none; cursor: inherit;">About Us</a>
-                                </li>
-                                <li>
-                                    <a href="#" class="editContent"
-                                       style="outline: none; cursor: inherit;">About Us</a>
-                                </li>
-                                <li>
-                                    <a href="#" class="editContent"
-                                       style="outline: none; cursor: inherit;">About Us</a>
+                                       style="outline: none; cursor: inherit;">{% trans 'о нас'|capfirst %}</a>
                                 </li>
                             </ul>
                         </div>
@@ -107,7 +89,7 @@
                     </div>
                     <div class="col-md-4 footer-grid_section_w3layouts my-md-0 my-5">
                         <h3 class="footer-title text-uppercase text-wh mb-lg-4 mb-3 editContent"
-                            style="outline: none; cursor: inherit;">Contact Info</h3>
+                            style="outline: none; cursor: inherit;">{% trans 'контактная информация'|capfirst %}</h3>
                         <div class="contact-info">
                             <div class="footer-address-inf my-4">
                                 <h4 class="ad-info mb-2 editContent"
@@ -117,9 +99,9 @@
                             </div>
                             <div class="footer-address-inf">
                                 <h4 class="ad-info mb-2 editContent"
-                                    style="outline: none; cursor: inherit;">Location</h4>
+                                    style="outline: none; cursor: inherit;">{% trans 'город'|capfirst %}</h4>
                                 <p class="editContent" style="outline: none; cursor: inherit;">
-                                    New York City</p>
+                                    {% trans 'Санкт-Петирбург' %}</p>
                             </div>
                         </div>
                     </div>

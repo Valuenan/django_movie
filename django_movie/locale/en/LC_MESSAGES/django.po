@@ -1,0 +1,248 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-04-23 15:30+0300\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: .\django_movie\settings.py:127
+msgid "Russian"
+msgstr "Русский"
+
+#: .\django_movie\settings.py:128
+msgid "English"
+msgstr "Английский"
+
+#: .\movies\models.py:18
+msgid "Категория"
+msgstr "Category"
+
+#: .\movies\models.py:19
+msgid "Категории"
+msgstr "Categories"
+
+#: .\movies\models.py:37 .\movies\models.py:38
+msgid "Актеры и режисеры"
+msgstr "Actors and directors"
+
+#: .\movies\models.py:52
+msgid "Жанр"
+msgstr "Genre"
+
+#: .\movies\models.py:53
+msgid "Жанры"
+msgstr "Genres"
+
+#: .\movies\models.py:86
+msgid "Фильм"
+msgstr "Film"
+
+#: .\movies\models.py:87
+msgid "Фильмы"
+msgstr "Films"
+
+#: .\movies\models.py:102
+msgid "Кадр из фильма"
+msgstr "Film frame"
+
+#: .\movies\models.py:103
+msgid "Кадры из фильма"
+msgstr "Film frames"
+
+#: .\movies\models.py:115
+msgid "Звезда рейтинга"
+msgstr "Rating star"
+
+#: .\movies\models.py:116
+msgid "Звезды рейтинга"
+msgstr "Rating stars"
+
+#: .\movies\models.py:131
+msgid "Рейтинг"
+msgstr "Rating"
+
+#: .\movies\models.py:132
+msgid "Рейтинги"
+msgstr "Ratings"
+
+#: .\movies\models.py:149
+msgid "Отзыв"
+msgstr "Review"
+
+#: .\movies\models.py:150
+msgid "Отзывы"
+msgstr "Reviews"
+
+#: .\templates\base.html:38 .\templates\include\footer.html:63
+#: .\templates\include\header.html:14
+msgid "главная"
+msgstr "main"
+
+#: .\templates\contact\tags\form.html:3
+msgid "Новостная рассылка"
+msgstr "Newsletter"
+
+#: .\templates\contact\tags\form.html:5
+msgid ""
+"Подписавшись на нашу рассылку, вы всегда будете получать последние новости и "
+"обновления от нас."
+msgstr ""
+"By subscribing to our newsletter, you will always receive the latest news "
+"and updates from us."
+
+#: .\templates\include\footer.html:18
+msgid "Наши социальные сети"
+msgstr "Catch on Social"
+
+#: .\templates\include\footer.html:59
+msgid "разделы"
+msgstr "sections"
+
+#: .\templates\include\footer.html:67 .\templates\include\header.html:21
+msgid "категории"
+msgstr "categories"
+
+#: .\templates\include\footer.html:71
+msgid "контакты"
+msgstr "contacts"
+
+#: .\templates\include\footer.html:79
+msgid "страницы"
+msgstr "pages"
+
+#: .\templates\include\footer.html:84 .\templates\include\header.html:16
+msgid "о нас"
+msgstr "about"
+
+#: .\templates\include\footer.html:92
+msgid "контактная информация"
+msgstr "contact information"
+
+#: .\templates\include\footer.html:102
+msgid "город"
+msgstr "location"
+
+#: .\templates\include\footer.html:104
+msgid "Санкт-Петирбург"
+msgstr "St. Petersburg"
+
+#: .\templates\include\header.html:11 .\templates\include\header.html:19
+msgid "меню"
+msgstr "menu"
+
+#: .\templates\include\header.html:31
+msgid "вход"
+msgstr "sign in"
+
+#: .\templates\include\header.html:56
+msgid "лучший сайт на django 3"
+msgstr "best django 3 site"
+
+#: .\templates\include\header.html:57
+msgid "Все о кино"
+msgstr "All about films"
+
+#: .\templates\include\side_bar.html:3
+msgid "поиск фильма"
+msgstr "search film"
+
+#: .\templates\include\side_bar.html:5
+msgid "введите название..."
+msgstr "enter name..."
+
+#: .\templates\include\side_bar.html:13
+msgid "жанры"
+msgstr "genres"
+
+#: .\templates\include\side_bar.html:27 .\templates\movies\movie_detail.html:19
+msgid "год"
+msgstr "year"
+
+#: .\templates\include\side_bar.html:37
+msgid "найти"
+msgstr "find"
+
+#: .\templates\movies\actor.html:18
+msgid "возраст"
+msgstr "age"
+
+#: .\templates\movies\actor.html:21 .\templates\movies\movie_detail.html:25
+msgid "режисер"
+msgstr "director"
+
+#: .\templates\movies\actor.html:28
+msgid "актер"
+msgstr "actor"
+
+#: .\templates\movies\movie_detail.html:20
+msgid "cтрана"
+msgstr "country"
+
+#: .\templates\movies\movie_detail.html:22
+msgid "слоган"
+msgstr "tag line"
+
+#: .\templates\movies\movie_detail.html:32
+msgid "актеры"
+msgstr "actors"
+
+#: .\templates\movies\movie_detail.html:39
+msgid "жанр"
+msgstr "genre"
+
+#: .\templates\movies\movie_detail.html:45
+msgid "премьера в мире"
+msgstr "world premiere"
+
+#: .\templates\movies\movie_detail.html:50
+msgid "бюджет"
+msgstr "бюджет"
+
+#: .\templates\movies\movie_detail.html:54
+msgid "сбры в США"
+msgstr "USA premiere"
+
+#: .\templates\movies\movie_detail.html:57
+msgid "сборы в мире"
+msgstr "fees in the world"
+
+#: .\templates\movies\movie_detail.html:63
+msgid "рейтинг"
+msgstr "rating"
+
+#: .\templates\movies\movie_detail.html:136
+msgid "оставить отзыв"
+msgstr "give review"
+
+#: .\templates\movies\movie_detail.html:143
+msgid "ваш коментарий"
+msgstr "your comment"
+
+#: .\templates\movies\movie_detail.html:150
+msgid "имя"
+msgstr "name"
+
+#: .\templates\movies\movie_detail.html:168
+msgid "отправить"
+msgstr "send"
+
+#: .\templates\movies\movie_detail.html:185
+msgid "ответить"
+msgstr "reply"
+
+#: .\templates\movies\tags\last_movies.html:3
+msgid "последние добавленные"
+msgstr "last added"

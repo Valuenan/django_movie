@@ -1,5 +1,5 @@
 {% extends 'movies/base.html' %}
-{% load static %}
+{% load i18n static %}
 {% block title %} {{ actor.name }} {% endblock title %}
 {% block sidebar %}
 <div class="side-bar col-lg-4">
@@ -15,17 +15,17 @@
                 <h5 class="editContent">{{ actor.name }}</h5>
                 <ul>
                     <li>
-                        <span><b>Возраст:</b> {{ actor.age }} лет</span>
+                        <span><b>{% trans 'возраст'|capfirst %}:</b> {{ actor.age }} лет</span>
                     </li>
                     <li>
-                        <span><b>Режиссер:</b>
+                        <span><b>{% trans 'режисер'|capfirst %}:</b>
                             {% for movie in actor.film_director.all %}
                                 {{ movie.title }}
                             {% endfor %}
                         </span>
                     </li>
                     <li>
-                        <span><b>Актер:</b>
+                        <span><b>{% trans 'актер'|capfirst %}:</b>
                             {% for movie in actor.film_actor.all %}
                                 {{ movie.title }}
                             {% endfor %}

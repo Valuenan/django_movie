@@ -1,6 +1,5 @@
 <!DOCTYPE html>
-{% load static %}
-{% load recaptcha3 %}
+{% load i18n static recaptcha3 %}
 <html lang="ru">
 <head>
     <!-- //Meta tag Keywords -->
@@ -36,7 +35,7 @@
         </div>
         <ol class="breadcrumb editContent">
             <li class="breadcrumb-item">
-                <a href="/" class="editContent">главная</a>
+                <a href="/" class="editContent">{% trans 'главная'|capfirst %}</a>
             </li>
                 <li class="breadcrumb-item active editContent">{{ movie.title }}</li>
         </ol>

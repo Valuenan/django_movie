@@ -1,8 +1,8 @@
-{% load movie_tags %}
+{% load i18n movie_tags %}
 <div class="search-bar w3layouts-newsletter">
-    <h3 class="sear-head editContent">Поиск фильма</h3>
+    <h3 class="sear-head editContent">{% trans 'поиск фильма'|capfirst %}</h3>
     <form action="{% url 'search' %}" method="get" class="d-flex editContent">
-        <input type="search" placeholder="Введите название..." name="q" class="form-control"
+        <input type="search" placeholder="{% trans 'введите название...'|capfirst %}" name="q" class="form-control"
                required="">
         <button type="submit" class="btn1 btn"><span class="fa fa-search" aria-hidden="true"></span></button>
     </form>
@@ -10,7 +10,7 @@
 <!--preference -->
 <form action="{% url 'filter' %}" method="get">
     <div class="left-side my-4">
-        <h3 class="sear-head editContent">Жанры</h3>
+        <h3 class="sear-head editContent">{% trans 'жанры'|capfirst %}</h3>
         <ul class="w3layouts-box-list">
             {% for genre in view.get_genres %}
                 <li class="editContent">
@@ -24,7 +24,7 @@
 <!-- discounts -->
 
     <div class="left-side">
-        <h3 class="sear-head editContent">Год</h3>
+        <h3 class="sear-head editContent">{% trans 'год'|capfirst %}</h3>
         <ul class="w3layouts-box-list">
             {% for movie in view.get_years %}
                 <li class="editContent">
@@ -34,7 +34,7 @@
             {% endfor %}
         </ul>
     </div>
-    <button type="submit">Найти</button>
+    <button type="submit">{% trans 'найти'|capfirst %}</button>
 </form>
 
 

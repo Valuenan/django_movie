@@ -1,7 +1,7 @@
 from django.db import models
 from datetime import date
-
 from django.urls import reverse
+from django.utils.translation import gettext_lazy as _
 
 
 class Category(models.Model):
@@ -15,8 +15,8 @@ class Category(models.Model):
 
     class Meta:
         db_table = "categories"
-        verbose_name = "Категория"
-        verbose_name_plural = "Категории"
+        verbose_name = _("Категория")
+        verbose_name_plural = _("Категории")
 
 
 class Actor(models.Model):
@@ -34,8 +34,8 @@ class Actor(models.Model):
 
     class Meta:
         db_table = "actors"
-        verbose_name = "Актеры и режисеры"
-        verbose_name_plural = "Актеры и режисеры"
+        verbose_name = _("Актеры и режисеры")
+        verbose_name_plural = _("Актеры и режисеры")
 
 
 class Genre(models.Model):
@@ -49,8 +49,8 @@ class Genre(models.Model):
 
     class Meta:
         db_table = "genres"
-        verbose_name = "Жанр"
-        verbose_name_plural = "Жанры"
+        verbose_name = _("Жанр")
+        verbose_name_plural = _("Жанры")
 
 
 class Movie(models.Model):
@@ -83,8 +83,8 @@ class Movie(models.Model):
 
     class Meta:
         db_table = "movies"
-        verbose_name = "Фильм"
-        verbose_name_plural = "Фильмы"
+        verbose_name = _("Фильм")
+        verbose_name_plural = _("Фильмы")
 
 
 class MovieShots(models.Model):
@@ -99,8 +99,8 @@ class MovieShots(models.Model):
 
     class Meta:
         db_table = "movie_shots"
-        verbose_name = "Кадр из фильма"
-        verbose_name_plural = "Кадры из фильма"
+        verbose_name = _("Кадр из фильма")
+        verbose_name_plural = _("Кадры из фильма")
 
 
 class RatingStar(models.Model):
@@ -112,8 +112,8 @@ class RatingStar(models.Model):
 
     class Meta:
         db_table = "rating_stars"
-        verbose_name = "Звезда рейтинга"
-        verbose_name_plural = "Звезды рейтинга"
+        verbose_name = _("Звезда рейтинга")
+        verbose_name_plural = _("Звезды рейтинга")
         ordering = ['-value']
 
 
@@ -128,8 +128,9 @@ class Rating(models.Model):
 
     class Meta:
         db_table = "ratings"
-        verbose_name = "Рейтинг"
-        verbose_name_plural = "Рейтинги"
+        verbose_name = _("Рейтинг")
+        verbose_name_plural = _("Рейтинги")
+
 
 
 class Reviews(models.Model):
@@ -145,5 +146,5 @@ class Reviews(models.Model):
 
     class Meta:
         db_table = "reviews"
-        verbose_name = "Отзыв"
-        verbose_name_plural = "Отзывы"
+        verbose_name = _("Отзыв")
+        verbose_name_plural = _("Отзывы")

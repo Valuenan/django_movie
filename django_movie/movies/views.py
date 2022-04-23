@@ -55,7 +55,7 @@ class MovieDetailView(GenreYear, DetailView):
             rating = rating[0]
         else:
             rating = 0
-        context["user_rating"] = lambda rating_num: rating[0] if rating else 0
+        context["user_rating"] = rating
 
         avg_star = Rating.objects.filter(movie=movie_id).aggregate(Avg('star__value'))
         context["average_stars"] = lambda avg: round(avg_star['star__value__avg'], 1) if avg_star else 0

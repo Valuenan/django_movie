@@ -1,6 +1,7 @@
 from django import forms
-from .models import Contact
 from snowpenguin.django.recaptcha3.fields import ReCaptchaField
+
+from .models import Contact
 
 
 class ContactForm(forms.ModelForm):
