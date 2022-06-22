@@ -170,6 +170,8 @@ INTERNAL_IPS = [
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
+TEST_RUNNER = 'movies.test.test_config.SuperFastTestRunner'
+
 CKEDITOR_CONFIGS = {
     'default': {
         'skin': 'moono',
