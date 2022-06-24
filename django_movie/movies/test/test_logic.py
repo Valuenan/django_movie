@@ -22,6 +22,18 @@ class PositiveLogicTests(TestCase):
         self.assertEqual(response.status_code, 200)
         self.assertContains(response, 'Главный герой')
 
+    def test_search_first_capitalise(self):
+        response = self.client.get('/search/?q=Дю')
+        self.assertContains(response, 'Дюна (фильм, 2021)')
+
+    def test_search_firs_lower(self):
+        response = self.client.get('/search/?q=дю')
+        self.assertContains(response, 'Дюна (фильм, 2021)')
+
+    def test_search_center_part(self):
+        response = self.client.get('/search/?q=2021')
+        self.assertContains(response, 'Дюна (фильм, 2021)')
+
 
 class NegativeLogicTests(TestCase):
     def setUp(self):
@@ -33,3 +45,5 @@ class NegativeLogicTests(TestCase):
         self.assertEqual(response.status_code, 200)
         self.assertNotContains(response,
                                ['Главный герой', 'Анчартед: На картах не значится (2022)', 'Дюна (фильм, 2021)'])
+
+
